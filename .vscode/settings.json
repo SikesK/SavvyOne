@@ -1,2 +1,4 @@
 {
+    "eslint.autoFixOnSave" : true,
+    "emmet.triggerExpansionOnTab":true,
 }
