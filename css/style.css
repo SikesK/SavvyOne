@@ -1,0 +1,121 @@
+body {
+    margin: 1;
+}
+/* Style the black box banner at top of every page */
+#bb-banner{
+    text-align: center;
+}
+/* Style the navigation bar at top of every page start */
+li {
+    float: left;
+}
+.nav-container h1 {
+    border-style: solid;
+    border-color: black; 
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+a:link,a:visited {
+    display: block; 
+    color:black;
+    background-color:white;
+    font-family: 'Knewave'; 
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    padding: 3px 3px;
+    font-size: 22px;
+    text-align: center;
+    text-decoration: none;
+}
+a:hover,a:active {
+    background-color: #FFCC00;
+}
+div.nav-container {
+    border: black 5px;
+}
+/* Style the navigation bar at top of every page stop */
+
+
+
+/* Style home button in navigation bar at top of every page start */
+.home.home-image {
+    width: 100px; /* Full-width */
+    background-color: #555; /* Dark-grey background */
+    overflow: auto; /* Overflow due to float */
+}
+
+.home.home-image li {
+    float: left; /* Float links side by side */
+    text-align: left; /* Center-align text */
+    width: 20%; /* Equal width (5 icons with 20% width each = 100%) */
+    padding: 12px 0; /* Some top and bottom padding */
+    transition: all 0.3s ease; /* Add transition for hover effects */
+    color: white; /* White text color */
+    font-size: 20px; /* Increased font size */
+}
+
+.home.home-image a:hover {
+    background-color: #000; /* Add a hover color */
+}
+
+.active {
+    background-color: #4CAF50; /* Add an active/current color */
+}
+/* Style home button in navigation bar at top of every page stop */
+
+
+
+
+
+
+
+
+/* Style the search box inside the navigation bar */
+.nav-container input[type=text] {
+    float: right;
+    padding: 6px;
+    margin-top: 4px;
+    margin-right: 16px;
+    font-size: 15px;
+
+
+
+
+
+
+
+
+
+
+
+
+#content {
+    size: 52px;
+    color: orange;
+    background-color: blue;
+    text-align: center;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50px;
+    width: 100%;
+}
+#footer {
+    size: 52px;
+    color: orange;
+    background-color: grey;
+    text-align: center;
+    padding: 50px;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 300px;
+    width: 100%;
+}
