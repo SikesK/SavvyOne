@@ -1,5 +1,6 @@
 body {
     margin: 1;
+    box-sizing: border-box;
 }
 .boxed {
     border: 4px solid white; 
@@ -83,23 +84,40 @@ div.nav-container {
     margin-top: 4px;
     margin-right: 16px;
     font-size: 15px;
+}
 /* Style the search box inside the navigation bar stop */
 
 
-/* Style for blog posts start */
+.new-post {
+    text-align: center;
+}
+
+
+
+.recent {
+    font-family: 'Knewave'; /* Latest blog posts header */
+}
+
+
+
+
+/* 4 newest blogs being displayed for reference start */
 .column {
     float: left;
     width: 50%;
-    }
-    
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin: 1px;
+}
+
 /* Clear floats after the columns */
 .row:after {
     content: "";
     display: table;
     clear: both;
-    }
-/* Style for blog posts stop */
-
+}
+/* 4 newest blogs being displayed for reference end*/
 
 
 
