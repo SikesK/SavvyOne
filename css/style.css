@@ -190,6 +190,8 @@ div.nav-container {
     padding-left: 20px;
     background-color: orange;
     text-align: center;
+    margin-bottom: 2px; 
+    padding-bottom: 10px;
   }
 
   #email-address {
@@ -198,28 +200,31 @@ div.nav-container {
   }
 
   .join {
-    padding-top: 35px;  
     text-align: center;
   }
 
   .email-header {
     font-family: 'Knewave'; 
+    font-size: 10pt; 
   }
+
+.email h4 {
+    background-color: slategrey; 
+    padding: 7px;
+    margin-left: 4px;
+    color: white;
+}
+
+
 /* Email list stop */
 
 
-#content {
-    size: 52px;
-    color: orange;
-    background-color: blue;
-    text-align: center;
-}
+
 
 #footer {
     color: orange;
     background-color: grey;
     text-align: center;
-    padding: 5px;
     clear: both;
 }
 
