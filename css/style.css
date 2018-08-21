@@ -1,9 +1,17 @@
 body {
-    margin: 1;
-    box-sizing: border-box;
+    margin: 0;
+    display: grid; 
+    grid-template-areas:
+        "header"
+        "navigation"
+        "content"
+        "footer"; 
+    grid-template-rows: min-content min-content auto min-content;
 }
 .boxed {
     border: 4px solid white; 
+    padding: 0 100px;
+    margin: 58px 100px;
 }
 
 .animate {
@@ -17,10 +25,51 @@ body {
 }
 
 /* Style the navigation bar at top of every page start */
+#navigation {
+    position: sticky; 
+    top: 0;
+    background-color: white;
+    font-family: 'Knewave';
+}
+
+#navigation a + ul {
+    position: absolute;
+    display: none;
+    left: 0;
+    bottom: -90px;
+    background-color: darkgray;
+    list-style: none;
+    padding: 10px;
+    border: 2px solid black;
+    width: 80%; 
+}
+
+#navigation > ul {
+    align-items: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#navigation a + ul:hover, 
+#navigation a:hover + ul {
+    display: flex;
+    flex-direction: column;
+    word-wrap: none;
+    height: 10vh;
+    justify-content: space-between;
+}
+
+#navigation > ul > li {
+    display: inline;
+    position: relative;
+    flex-grow: 1; 
+}
+
 li {
     float: left;
 }
-.nav-container h1 {
+.nav-container {
     border-style: solid;
     border-color:darkgray; 
     margin-top: 0; 
@@ -30,7 +79,6 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
 }
 a:link,a:visited {
     display: block; 
@@ -51,6 +99,8 @@ a:hover,a:active {
 div.nav-container {
     border: black 5px;
 }
+
+
 /* Style the navigation bar at top of every page stop */
 
 
@@ -74,6 +124,7 @@ div.nav-container {
 .material-icons i:hover {
     background-color:#FFCC00; /* Add a hover color */
 }
+
 /* Style home button in navigation bar at top of every page stop */
 
 
@@ -89,10 +140,11 @@ div.nav-container {
 
 
 .new-post {
-    text-align: center;
+    text-align: left;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    padding-top: 0px;
 }
-
-
 
 .recent {
     font-family: 'Knewave'; /* Latest blog posts header */
@@ -119,8 +171,13 @@ div.nav-container {
 }
 /* 4 newest blogs being displayed for reference end*/
 
-
-
+/* about me start */
+.rightcolumn {
+    float: right;
+    width: 25%;
+    padding-left: 20px;
+  }
+/* about me stop */
 
 
 #content {
@@ -129,22 +186,12 @@ div.nav-container {
     background-color: blue;
     text-align: center;
 }
-.container {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 50px;
-    width: 100%;
-}
+
 #footer {
-    size: 52px;
     color: orange;
     background-color: grey;
     text-align: center;
-    padding: 50px;
+    padding: 5px;
+    clear: both;
 }
-.container {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 300px;
-    width: 100%;
-}
+
