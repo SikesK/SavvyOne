@@ -138,12 +138,17 @@ div.nav-container {
 }
 /* Style the search box inside the navigation bar stop */
 
-
 .new-post {
     text-align: left;
     margin-left: 5px;
     margin-bottom: 10px;
     padding-top: 0px;
+    grid-template-columns: 75% 25%;
+}
+
+.fakeimg img {
+    width: 700px;
+    height: 500px;
 }
 
 .recent {
@@ -155,12 +160,19 @@ div.nav-container {
 
 /* 4 newest blogs being displayed for reference start */
 .column {
+    size: 300px 300px; 
+    background-color: #aaa;
     float: left;
-    width: 50%;
+    width: 100%;
     text-align: center;
     margin-top: 5px;
     margin-bottom: 5px;
     margin: 1px;
+    grid-template-columns: 75% 25%;
+    display: grid;
+    grid-template-rows: 75% 10%;
+    grid-template-areas: "card" "recent" 
+    "row" "row";
 }
 
 /* Clear floats after the columns */
@@ -171,13 +183,29 @@ div.nav-container {
 }
 /* 4 newest blogs being displayed for reference end*/
 
-/* about me start */
-.rightcolumn {
+/* Email list start */
+.submit-email {
     float: right;
     width: 25%;
     padding-left: 20px;
+    background-color: orange;
+    text-align: center;
   }
-/* about me stop */
+
+  #email-address {
+    padding: 8px;
+    font-size: 15px;
+  }
+
+  .join {
+    padding-top: 35px;  
+    text-align: center;
+  }
+
+  .email-header {
+    font-family: 'Knewave'; 
+  }
+/* Email list stop */
 
 
 #content {
