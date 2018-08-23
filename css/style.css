@@ -158,6 +158,12 @@ div.nav-container {
     display: flex; 
 }
 
+#new-content {
+    display: grid;
+    grid-template-column: 75% 25%;
+    grid-template-rows: 75% 25%;    
+}
+
 .new-post {
     text-align: left;
     margin-left: 5px;
@@ -273,6 +279,7 @@ div.nav-container {
     display: flex;
     flex-direction: row; 
     justify-content: space-between; 
+    flex-wrap: wrap; 
 }
 
 .boxed-bottom {
@@ -302,6 +309,15 @@ div.nav-container {
 .social-footer li {
     padding: 2px;
 }
+
+#grey-footer {
+    font-family: 'Knewave'; 
+    color: lightgray; 
+    font-size: 10pt; 
+    text-align: center;
+    background-color:darkgray;
+    width: 100%; 
+} 
 
 /* Footer stop */
     
