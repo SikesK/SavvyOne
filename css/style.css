@@ -160,7 +160,7 @@ div.nav-container {
 
 #new-content {
     display: grid;
-    grid-template-column: 75% 25%;
+    grid-template-columns: 75% 25%;
     grid-template-rows: 75% 25%;    
 }
 
@@ -178,6 +178,8 @@ div.nav-container {
 
 .recent {
     font-family: 'Knewave'; /* Latest blog posts header */
+    display: flex;
+    flex-wrap: wrap; 
 }
 
 .blog-old {
@@ -195,13 +197,11 @@ div.nav-container {
 
 /* Email list start */
 .submit-email {
-    float: right;
-    width: 250px; 
     padding-left: 20px;
     background-color: orange;
-    margin-bottom: 2px; 
-    display: flex; 
-  }
+    margin-left: 5px; 
+    margin-top: 5px; 
+ }
 
   #email-address {
     padding: 8px;
@@ -248,7 +248,7 @@ div.nav-container {
     justify-content: center;
     padding-right: 10px; 
     font-size: 25px;
-    }
+}
 
 .email-social li {
     padding: 2px;
@@ -260,8 +260,7 @@ div.nav-container {
     color: lightyellow;
     display: flex;
     justify-content: space-around; 
-    align-items: flex-end;
-    
+    align-items: flex-end;  
 }
 
 
@@ -291,11 +290,13 @@ div.nav-container {
     background-color: black;
     border: 5px;
     padding: 2px;
+    display: flex;
+    flex-direction: row-reverse; 
 }
 
 .footer-container {
-        border: 4px solid lightgray; 
-        padding: 0 10px;
+    border: 4px solid lightgray; 
+    padding: 0 10px;
 } 
      
 .social-footer {
