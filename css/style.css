@@ -103,10 +103,6 @@ div.nav-container {
     border: black 5px;
 }
 
-.about {
-    border: 2px solid black; 
-}
-
 /* Style the navigation bar at top of every page stop */
 
 
@@ -157,6 +153,11 @@ div.nav-container {
     grid-template-rows: 75% 25%;  
 }
 
+.new-post h2 {
+    font-family: 'open sans bold';
+    font-size: 25px; 
+}
+
 .tin-man img {
     width: 700px;
     height: 500px;
@@ -173,6 +174,16 @@ div.nav-container {
     grid-template-columns: 37.5% 37.5% 25%; 
     grid-template-rows: 37.5% 37.5% 25%;
 }
+
+.blue-robot img {
+    width: 250px;
+    height: 250px;
+}
+
+.drummer-robot img {
+    width: 250px;
+    height: 250px;
+}
 /* All blogs being displayed end*/
 
 /* Email list start */
@@ -186,9 +197,7 @@ div.nav-container {
   #email-address {
     padding: 8px;
     font-size: 15px;
-    display: flex;
-    flex-direction: row;
-  }
+}
 
   .join {
     text-align: center;
@@ -248,57 +257,51 @@ div.nav-container {
 
 
 /* Footer start */
-#footer {
-    background-color:black;
-    clear: both;
-    position: sticky; 
-    padding: 12px;
-    width: 100%; 
+.home-footer {
     grid-area: footer; 
-    display: flex;
-    flex-direction: row; 
-    justify-content: space-between; 
-    flex-wrap: wrap; 
+    display: grid;
 }
 
 .boxed-bottom {
-    text-align: left;
     font-family: 'Knewave'; 
     color: lightgray; 
-    font-size: 15pt; 
-    text-align: center;
-    background-color: black;
-    border: 5px;
-    padding: 2px;
-    display: flex;
-    flex-direction: row-reverse; 
-}
-
-.footer-container {
     border: 4px solid lightgray; 
-    padding: 0 10px;
-} 
+    padding: 10px;  
+    font-size: 30px; 
+}
      
 .social-footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-right: 10px; 
-    font-size: 30px; 
-    }
+    display: grid;
+    grid-template-rows: 33.33% 33.33% 33.33%;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    padding: 10px; 
+    background-color: black; 
+}
 
 .social-footer li {
-    padding: 2px;
+    padding: 5px;
+    font-size: 30px;
+    
 }
 
 #grey-footer {
     font-family: 'Knewave'; 
     color: lightgray; 
     font-size: 10pt; 
-    text-align: center;
     background-color:darkgray;
-    width: 100%; 
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end; 
 } 
+
+#grey-footer h2 {
+    display: inline-block; 
+    padding: 0px 10px;
+}
+
+.far fa-copyright {
+    float: right; 
+}
 
 /* Footer stop */
     
