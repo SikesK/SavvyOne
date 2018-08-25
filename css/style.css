@@ -147,56 +147,36 @@ div.nav-container {
 
 /* All blogs being displayed start */
 #content {
-    size: 300px 300px; 
-    float: left;
-    width: 100%;
-    text-align: center;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin: 1px;
     grid-area: content; 
-    display: flex; 
+    display: grid; 
 }
 
-#new-content {
+#new-post-subscribe {
     display: grid;
     grid-template-columns: 75% 25%;
-    grid-template-rows: 75% 25%;    
+    grid-template-rows: 75% 25%;  
 }
 
-.new-post {
-    text-align: left;
-    margin-left: 5px;
-    margin-bottom: 10px;
-    padding-top: 0px;
-}
-
-.fakeimg img {
+.tin-man img {
     width: 700px;
     height: 500px;
 }
 
-.recent {
+.latest-post-header {
     font-family: 'Knewave'; /* Latest blog posts header */
-    display: flex;
-    flex-wrap: wrap; 
+    display: grid;
+    grid-template-rows: 100%; 
 }
 
-.blog-old {
-    display: flex;
-    flex-direction: row; 
-    flex-wrap: wrap; 
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
+.old-entries {
+    display: grid; 
+    grid-template-columns: 37.5% 37.5% 25%; 
+    grid-template-rows: 37.5% 37.5% 25%;
 }
 /* All blogs being displayed end*/
 
 /* Email list start */
-.submit-email {
+.subscribe-box {
     padding-left: 20px;
     background-color: orange;
     margin-left: 5px; 
@@ -229,7 +209,7 @@ div.nav-container {
     text-align: center; 
   }
 
-.email h4 {
+.ok h4 {
     background-color: slategrey; 
     padding: 7px;
     margin-left: 4px; 
