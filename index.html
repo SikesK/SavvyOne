@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Knewave" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 
 <body>
@@ -25,24 +26,22 @@
             <li>
                 <a class="about" href="/">about</a>
                     <ul>
-                        <li>team</li>
-                        <li>faq</li>
-                        <li>contact</li>
+                        <li class="open-sans" class="about-drop">team</li>
+                        <li class="open-sans" class="about-drop">faq</li>
+                        <li class="open-sans" class="about-drop">contact</li>
                     </ul>
             </li>
             <li>
                 <a href="/projects">archive</a>
-                    <ul>
-                        <li>neural nets</li>
-                        <li>robotics</li>
-                        <li>machine learning</li>
-                        <li>natural language</li>
-                        <li>fuzzy logic</li>
-                        <li>voice</li>
-                    </ul>
             </li>
             <li>
-                <a href="/">podcasts</a>
+                <a href="">shorts</a>
+            </li>
+            <li>
+                <a href="">the cache</a>
+            </li>
+            <li>
+                <a href="/">robot</a> 
             </li>
             <li>
                 <a href="/support">support</a>
@@ -56,7 +55,7 @@
 
         <div id="new-post-subscribe"> 
             <div class="new-post">
-                <h2>Adventures in AI</h2>
+                <h2 class="open-sans">Adventures in AI</h2>
                 <div class="tin-man">
                     <img alt="robot" src="https://d2r9nfiii89r0l.cloudfront.net/article/images/740x500/dimg/dreamstime_m_105074748.jpg">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus numquam ab repellendus.</p>
@@ -64,15 +63,17 @@
             </div>
             <div class="subscribe-box">
                 <h2 class="email-header">Join The Black Box</h2>
-                <h3 class="join">Subscribe to our email list</h3>
-                <ul>
-                    <li>
-                        <input id="email-address" type="email" placeholder="Email Address" size="20">
-                    </li>
-                    <li>
-                        <h4 class="ok">OK</h4>
-                    </li>
-                </ul>
+                <h3 class="open-sans" class="join">Subscribe to our email list</h3>
+                <div>
+                    <ul>
+                        <li>
+                            <input id="email-address" type="email" placeholder="Email Address">
+                        </li>
+                        <li>
+                            <h4 class="ok">OK</h4>
+                        </li>
+                    </ul>
+                </div>
                 <div class="email-social">
                     <ul>
                         <li>
@@ -98,14 +99,14 @@
                 <div class="old-row-one">
                     <ul>
                         <li class="first-old-blog">
-                            <h2>Archived Blog #1</h2>
+                            <h2 class="open-sans">Archived Blog #1</h2>
                             <div class="blue-robot">
                                 <img alt="blue-robot" src="https://farm2.static.flickr.com/1713/25013855932_5f0973f76e_b.jpg">
                                 <p>Some text...</p>
                             </div>
                         </li>
                         <li class="second-old-blog">
-                            <h2>Archived Blog #2</h2>
+                            <h2 class="open-sans">Archived Blog #2</h2>
                             <div class="drummer-robot">
                                 <img alt="drummer-robot" src="https://www.internetages.com/files/small/To/y1/A1-Blue-Tin_Material_Windup_Toy_Vintage_Style_Walking_Robot_Clockwork_Toy_1.jpg">
                                 <p>Some text...</p>
@@ -116,16 +117,16 @@
                 <div class="old-row-two">
                     <ul>
                         <li class="third-old-blog">
-                            <h2>Archived Blog #3</h2>
-                            <div class="tin-man">
-                                <img alt="robot" src="">
+                            <h2 class="open-sans">Archived Blog #3</h2>
+                            <div class="black">
+                                <img alt="robot" src="https://via.placeholder.com/250/000000">
                                 <p>Some text...</p>
                             </div>
                         </li>
                         <li class="fourth-old-blog">
-                            <h2>Archived Blog #4</h2>
-                            <div class="tin-man">
-                                <img alt="robot" src="">
+                            <h2 class="open-sans">Archived Blog #4</h2>
+                            <div class="black">
+                                <img alt="robot" src="https://via.placeholder.com/250/000000">
                                 <p>Some text...</p>
                             </div>
                         </li>
@@ -134,16 +135,16 @@
                 <div class="old-row-three">
                     <ul>
                         <li class="fifth-old-blog">
-                            <h2>Archived Blog #5</h2>
-                            <div class="tin-man">
-                                <img alt="robot" src="">
+                            <h2 class="open-sans">Archived Blog #5</h2>
+                            <div class="black">
+                                <img alt="robot" src="https://via.placeholder.com/250/000000">
                                 <p>Some text...</p>
                             </div>
                         </li>
                         <li class="sixth-old-blog">
-                            <h2>Archived Blog #6</h2>
-                            <div class="tin-man">
-                                <img alt="robot" src="">
+                            <h2 class="open-sans">Archived Blog #6</h2>
+                            <div class="black">
+                                <img alt="robot" src="https://via.placeholder.com/250/000000">
                                 <p>Some text...</p>
                             </div>
                         </li>
@@ -159,7 +160,7 @@
         <div class="home-footer">
             <div class="social-footer">
                 <h2 class="boxed-bottom">The Black Box</h2>
-                <ul>
+                <ul class="footer-buttons">
                     <li>
                         <i class="fab fa-twitter" fa-3x></i>
                     </li>
@@ -174,16 +175,17 @@
                     </li>
                 </ul>
             </div>
+            
             <div id="grey-footer">
                 <ul>
                     <li>
-                        <h2>Questions?</h2>
+                        <h2 class="open-sans">Questions?</h2>
                     </li>
                     <li>
-                        <h2>Reach out to us via email.</h2> 
+                        <h2 class="open-sans">Reach out to us via email.</h2> 
                     </li>
                     <li>
-                        <h3><i class="far fa-copyright"></i>The Black Box, All Rights Reserved</h3>
+                        <h3 class="open-sans"><i class="far fa-copyright"></i>The Black Box, All Rights Reserved</h3>
                     </li>
                 </ul>
             </div>

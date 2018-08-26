@@ -27,6 +27,10 @@ body {
     padding: 2px;
 }
 
+.open-sans {
+    font-family: 'Open Sans', sans-serif;
+}
+
 /* Style the navigation bar at top of every page start */
 #navigation {
     position: sticky; 
@@ -52,6 +56,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    border: 2px black solid;
 }
 
 #navigation a + ul:hover, 
@@ -103,6 +108,11 @@ div.nav-container {
     border: black 5px;
 }
 
+.about-drop {
+    border: 2px solid black; 
+}
+
+
 /* Style the navigation bar at top of every page stop */
 
 
@@ -112,14 +122,16 @@ div.nav-container {
 .material-icons {
     vertical-align:-14%;
     background-color: #555;
-    padding: 7px;
+    padding-left: 30px;
+    padding-right: 30px; 
+    padding-top: 7px; 
+    padding-bottom: 7px; 
     margin: 3px 3px 2px 2px; 
 }
 
 #home.material-icons {
     display: block; 
     text-align: left; /* Center-align text */
-    background-color: #555; 
     font-size: 10px; /* Increased font size */
 }
 
@@ -154,7 +166,6 @@ div.nav-container {
 }
 
 .new-post h2 {
-    font-family: 'open sans bold';
     font-size: 25px; 
 }
 
@@ -165,8 +176,11 @@ div.nav-container {
 
 .latest-post-header {
     font-family: 'Knewave'; /* Latest blog posts header */
+    color: white; 
     display: grid;
     grid-template-rows: 100%; 
+    background-color: #F40830; 
+    padding-left: 10px; 
 }
 
 .old-entries {
@@ -195,7 +209,11 @@ div.nav-container {
  }
 
   #email-address {
-    padding: 8px;
+    padding: 20px;
+    font-size: 15px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 20px;
     font-size: 15px;
 }
 
@@ -205,8 +223,8 @@ div.nav-container {
 
   .email-header {
     font-family: 'Knewave'; 
-    font-size: 10pt; 
-    display: flex;
+    font-size: 18pt; 
+    display: grid;
     flex-direction: column;
     justify-content: center;
     flex-wrap: wrap; 
@@ -218,7 +236,7 @@ div.nav-container {
     text-align: center; 
   }
 
-.ok h4 {
+h4.ok {
     background-color: slategrey; 
     padding: 7px;
     margin-left: 4px; 
@@ -257,34 +275,53 @@ div.nav-container {
 
 
 /* Footer start */
-.home-footer {
+#footer {
     grid-area: footer; 
     display: grid;
 }
 
-.boxed-bottom {
+.boxed-bottom { /* Black Box Logo */
     font-family: 'Knewave'; 
     color: lightgray; 
     border: 4px solid lightgray; 
     padding: 10px;  
     font-size: 30px; 
+    grid-column-start: 1; /* Moves Black Box Logo left to right */
+    grid-row-start: 1; /* Moves Black Box Logo up & down */
+    display: block; 
+    text-align: center; 
+    align-items: center; 
 }
      
-.social-footer {
+.social-footer { /* Social Buttons & BB Header*/
     display: grid;
-    grid-template-rows: 33.33% 33.33% 33.33%;
-    grid-template-columns: 33.33% 33.33% 33.33%;
     padding: 10px; 
     background-color: black; 
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
 }
+
+.footer-buttons {
+    grid-column-start: 5; /* Moves social button left to right */  
+    display: block;
+    align-items: center; 
+    text-align: center; 
+    padding: 5px;  
+    grid-row-start: 1; 
+}
+
+
+.social-footer ul { /* Social Buttons ordered list */
+   
+ }
 
 .social-footer li {
     padding: 5px;
-    font-size: 30px;
-    
+    font-size: 30px;   
 }
 
-#grey-footer {
+/*grey footer*/
+#grey-footer { /* Entire grey footer */
     font-family: 'Knewave'; 
     color: lightgray; 
     font-size: 10pt; 
@@ -318,16 +355,24 @@ form {
 }
 
 input[type=email] {
-    width: 25%;
+    width: ;
 }
 
 input {
-    margin: 5px; 
+    margin: ; 
 }
 
 /* Support page stop */
 
 @media screen and (min-width: 320px) {
     body {
+        grid-template-areas: 
+            "header"
+            "navigation"
+            "content"
+            "footer"; 
+        grid-template-rows: min-content auto min-content min-content;
+        grid-template-columns: 100vw auto;
+
     }
 }
