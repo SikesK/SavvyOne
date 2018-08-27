@@ -102,7 +102,7 @@ a:link,a:visited {
     text-decoration: none;
 }
 a:hover,a:active {
-    background-color: #FFCC00;
+    background-color: orange;
 }
 div.nav-container {
     border: black 5px;
@@ -136,7 +136,7 @@ div.nav-container {
 }
 
 .material-icons i:hover {
-    background-color:#FFCC00; /* Add a hover color */
+    background-color:orange; /* Add a hover color */
 }
 
 /* Style home button in navigation bar at top of every page stop */
@@ -170,8 +170,9 @@ div.nav-container {
 }
 
 .tin-man img {
-    width: 700px;
-    height: 500px;
+    width: 100%;
+    height: 100%;
+    border: 7px solid #F40830;
 }
 
 .latest-post-header {
@@ -190,13 +191,18 @@ div.nav-container {
 }
 
 .blue-robot img {
-    width: 250px;
-    height: 250px;
+    width: 500px;
+    height: 500px;
 }
 
 .drummer-robot img {
-    width: 250px;
-    height: 250px;
+    width: 500px;
+    height: 500px;
+}
+
+.black img {
+    width: 500px;
+    height: 500px; 
 }
 /* All blogs being displayed end*/
 
@@ -272,6 +278,18 @@ div.nav-container {
 
 
 /* Email list stop */
+
+/* Store start */
+
+.store-box {
+    padding-left: 20px;
+    background-color:#3ED6D9;
+    margin-left: 5px; 
+    margin-top: 5px; 
+ }
+
+/* Store stop */
+
 
 
 /* Footer start */
