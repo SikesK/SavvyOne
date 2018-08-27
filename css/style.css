@@ -236,7 +236,7 @@ div.nav-container {
     text-align: center; 
   }
 
-h4.ok {
+#ok h4 {
     background-color: slategrey; 
     padding: 7px;
     margin-left: 4px; 
@@ -286,6 +286,7 @@ h4.ok {
     border: 4px solid lightgray; 
     padding: 10px;  
     font-size: 30px; 
+    margin-left: 5px; 
     grid-column-start: 1; /* Moves Black Box Logo left to right */
     grid-row-start: 1; /* Moves Black Box Logo up & down */
     display: block; 
@@ -295,25 +296,46 @@ h4.ok {
      
 .social-footer { /* Social Buttons & BB Header*/
     display: grid;
-    padding: 10px; 
     background-color: black; 
+    color: lightyellow; 
     grid-template-columns: 20% 20% 20% 20% 20%;
     grid-template-rows: 20% 20% 20% 20% 20%;
+    padding: 10px;
 }
 
-.footer-buttons {
-    grid-column-start: 5; /* Moves social button left to right */  
-    display: block;
+.follow-us-box {
+    grid-column-start: 3; /* Moves social button left to right */  
+    display: grid;
     align-items: center; 
-    text-align: center; 
-    padding: 5px;  
+    text-align: center;  
     grid-row-start: 1; 
 }
 
+.footer-buttons {
+    width: 100%; 
+    justify-content: space-between;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    font-size: 25px;
+}
 
-.social-footer ul { /* Social Buttons ordered list */
-   
- }
+.follow-us {
+    justify-content: center; 
+    align-items: center; 
+    font-size: 25px; 
+    font-family: open sans
+}
+
+#in-touch-footer {
+    padding-left: 1000px;
+    width: 100%; 
+    font-family: 'Open Sans', sans-serif;
+}
+
+#stay-in-touch h2 {
+    font-size: 25px; 
+}
 
 .social-footer li {
     padding: 5px;
@@ -322,23 +344,32 @@ h4.ok {
 
 /*grey footer*/
 #grey-footer { /* Entire grey footer */
-    font-family: 'Knewave'; 
     color: lightgray; 
-    font-size: 10pt; 
     background-color:darkgray;
     display: flex;
     justify-content: space-around;
     align-items: flex-end; 
 } 
 
-#grey-footer h2 {
-    display: inline-block; 
-    padding: 0px 10px;
+.open-sans {
+    font-size: 17px;
 }
 
-.far fa-copyright {
-    float: right; 
+.open-sans a {
+    font-size: 20px;
+    color: gray; 
+    font-style: bold; 
 }
+
+.ideas {
+    padding-right: 100px;   
+   }
+
+.rights {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
 
 /* Footer stop */
     
