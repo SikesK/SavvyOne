@@ -163,6 +163,7 @@ div.nav-container {
     display: grid;
     grid-template-columns: 75% 25%;
     grid-template-rows: 75% 25%;  
+    al
 }
 
 .new-post h2 {
@@ -193,16 +194,19 @@ div.nav-container {
 .blue-robot img {
     width: 500px;
     height: 500px;
+    border: 7px solid #3ED6D9;
 }
 
 .drummer-robot img {
     width: 500px;
     height: 500px;
+    border: 7px solid #3ED6D9;
 }
 
 .black img {
     width: 500px;
     height: 500px; 
+    border: 7px solid #3ED6D9; 
 }
 /* All blogs being displayed end*/
 
@@ -355,9 +359,25 @@ div.nav-container {
     font-size: 25px; 
 }
 
+#in-touch-ok {
+    font-size: 25px;
+    background-color: slategrey; 
+    padding: 7px;
+    margin-left: 4px; 
+    display: flex; 
+    flex-direction: row;
+    align-items: baseline;
+    justify-content:flex-end;
+
+}
+
 .social-footer li {
     padding: 5px;
     font-size: 30px;   
+}
+
+#submit-footer h4 {
+    font-size: 15px;
 }
 
 /*grey footer*/
