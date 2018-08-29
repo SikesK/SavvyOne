@@ -11,17 +11,20 @@ var welcomeUser = function welcomeUser(){
 
 welcomeUser();
 
-var changeAndShout = function changeAndShout(name){
-    console.log(name);
-    if(name === 'Blah'){
-        name = 'Alex';
-    }
-    else{
-        name = 'Blah';
-        console.log(name);
-    }
+export default function welcomeUser(){
+    var welcomeUser = function welcomeUser(){
+        var userName = prompt('What is you\'re Designation User?');
 
-    alert(name);
-};
+        if(UserName === ''){
+            welcomeUser();
+        }
+        else{
+            // alert ('Welcome to my page, ' + userName);
+            document.querySelector('#greeting').innerHTML = '<h3>Welcome to my test page, $(userName)</h3>';
+        }
+    };
 
-changeAndShout('hello world');
+    welcomeUser();
+}
+
+

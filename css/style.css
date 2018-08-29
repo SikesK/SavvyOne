@@ -1,6 +1,6 @@
 
 
-body {
+#root {
     margin: 1; 
     display: grid; 
     grid-template-areas:
@@ -11,13 +11,28 @@ body {
     min-height: 100vh; 
     grid-template-rows: min-content min-content auto min-content;
 }
+
+/* body {
+    margin: 1; 
+    display: grid; 
+    grid-template-areas:
+        "header"
+        "navigation"
+        "content"
+        "footer"; 
+    min-height: 100vh; 
+    grid-template-rows: min-content min-content auto min-content;
+} */
+
+
+
 .boxed {
     border: 4px solid white; 
     padding: 0 100px;
     margin: 58px 100px;
 }
 
-.header {
+#header {
     font-family: 'Knewave'; 
     color: white; 
     font-size: 35pt; 
@@ -25,6 +40,8 @@ body {
     background-color: black;
     border: 5px;
     padding: 2px;
+    grid-area: header;
+    display: grid;
 }
 
 .open-sans {
@@ -159,21 +176,31 @@ div.nav-container {
     display: grid; 
 }
 
-#new-post-subscribe {
+.new-post-subscribe {
     display: grid;
     grid-template-columns: 75% 25%;
     grid-template-rows: 75% 25%;  
-    al
+    position: relative;    
 }
 
-.new-post h2 {
-    font-size: 25px; 
+.new-post-text h2 {
+    font-size: 40px; 
+    font-style: bold; 
+    background-color: #00FF00; 
+    color: white; 
+    padding-left: 15px; 
+    width: 22.5%;
 }
 
 .tin-man img {
-    width: 100%;
+    width: 75%;
     height: 100%;
     border: 7px solid #F40830;
+    margin-top: 15px;
+}
+
+.new-post-text {
+    width: ;
 }
 
 .latest-post-header {
@@ -376,8 +403,13 @@ div.nav-container {
     font-size: 30px;   
 }
 
-#submit-footer h4 {
+#submit-footer {
     font-size: 15px;
+    background-color: darkgray;
+    width: 35%;
+    justify-content: center;
+    align-items: center; 
+    margin-left: 1px;
 }
 
 /*grey footer*/
@@ -434,7 +466,7 @@ input {
 /* Support page stop */
 
 @media screen and (min-width: 320px) {
-    body {
+    /* body {
         grid-template-areas: 
             "header"
             "navigation"
@@ -442,6 +474,13 @@ input {
             "footer"; 
         grid-template-rows: min-content auto min-content min-content;
         grid-template-columns: 100vw auto;
-
-    }
+    } */
+     #root {
+        grid-template-areas: 
+            "header"
+            "navigation"
+            "content"
+            "footer"; 
+        grid-template-rows: min-content auto min-content min-content;
+        grid-template-columns: 100vw auto;
 }
