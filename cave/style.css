@@ -1,3 +1,17 @@
+
+
+/* #root {
+    margin: 1; 
+    display: grid; 
+    grid-template-areas:
+        "header"
+        "navigation"
+        "content"
+        "footer"; 
+    min-height: 100vh; 
+    grid-template-rows: min-content min-content auto min-content;
+} */
+
 body {
     margin: 1; 
     display: grid; 
