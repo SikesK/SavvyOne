@@ -1,6 +1,6 @@
 
 
-/* #root {
+#root {
     margin: 1; 
     display: grid; 
     grid-template-areas:
@@ -10,9 +10,9 @@
         "footer"; 
     min-height: 100vh; 
     grid-template-rows: min-content min-content auto min-content;
-} */
 
-body {
+
+/* body {
     margin: 1; 
     display: grid; 
     grid-template-areas:
@@ -21,7 +21,7 @@ body {
         "content"
         "footer"; 
     min-height: 100vh; 
-    grid-template-rows: min-content min-content auto min-content;
+    grid-template-rows: min-content min-content auto min-content; */
 }
 
 
@@ -447,7 +447,6 @@ div.nav-container {
 
 
  /* Add for header and content too */
-}
 
 /* Support page start */
 
@@ -465,7 +464,7 @@ input {
 
 /* Support page stop */
 
-@media screen and (min-width: 320px) {
+/* @media screen and (min-width: 320px) { */
     /* body {
         grid-template-areas: 
             "header"
