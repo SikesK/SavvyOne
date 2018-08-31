@@ -32,7 +32,7 @@ body {
     margin: 58px 100px;
 }
 
-.header {
+#header {
     font-family: 'Knewave'; 
     color: white; 
     font-size: 35pt; 
