@@ -16,3 +16,12 @@ document
         ${Content(state)}
         ${Footer(state)}
     `;
+
+document
+    .querySelector('h1')
+    .addEventListener(
+        'click',
+        function changeTheTitle(event){
+            event.target.textContent = 'Welcome to my Page';
+        }
+    );
