@@ -6,8 +6,8 @@ import Footer from './components/Footer';
 document
     .querySelector('#root')
     .innerHTML = `
-    ${Navigation}
-    ${Header}
-    ${Content}
-    ${Footer}
+        ${Navigation()}
+        ${Header()}
+        ${Content()}
+        ${Footer()}
     `;

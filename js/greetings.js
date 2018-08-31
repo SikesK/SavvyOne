@@ -1,3 +1,18 @@
+function welcome(){
+    return 'Welcome to my page';
+}
+
+
+
+
+function welcomeUser(){
+    var userName = prompt("What's your name?");
+
+    if(userName === ''){
+        welcomeUser();
+}
+
+
 var welcomeUser = function welcomeUser(){
     var userName = prompt("What's your name?");
 

@@ -1,4 +1,5 @@
-export default `
+export default function Content(){
+    return `
 <div id='content'>
     <div class="new-post-subscribe"> 
             <div class="new-post">
@@ -113,3 +114,4 @@ export default `
         </div>
     </div>
 `;
+}

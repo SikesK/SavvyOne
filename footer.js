@@ -1,4 +1,5 @@
-export default `
+export default function Footer(){
+    return `
 <div id='footer'>
     <div class="home-footer">
             <div class="social-footer">
@@ -48,3 +49,4 @@ export default `
         </div>
     </div>
 `;
+}

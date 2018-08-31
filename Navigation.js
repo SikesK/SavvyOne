@@ -1,4 +1,5 @@
-export default ` 
+export default function Navigation(){
+    return ` 
     <div id="navigation">
         <ul class="nav-container">
             <li>
@@ -30,3 +31,4 @@ export default `
         </ul>
     </div>
 `;
+}
