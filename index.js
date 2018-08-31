@@ -11,17 +11,36 @@ var state = {
 document
     .querySelector('#root')
     .innerHTML = `
-        ${Navigation(state)}
+        ${Navigation()}
         ${Header(state)}
-        ${Content(state)}
-        ${Footer(state)}
+        ${Content()}
+        ${Footer()}
     `;
 
 document
-    .querySelector('h1')
+    .querySelector('#header')
     .addEventListener(
         'click',
         function changeTheTitle(event){
             event.target.textContent = 'Welcome to my Page';
         }
     );
+
+// document
+//     .querySelector('#header')
+//     .addEventListener(
+//         'click',
+//         function changeTheTitle(event){
+//             /*or*/
+//             (event) => {
+//             var standard = 'The Black Box';
+//             var funny = 'Welcome to my Page';
+
+//             if(event.target.textContent === standard);
+//                 event.target.textContent = funny;
+//             }
+//             else{
+//                 event.target.textContent = standard;
+//             }
+//         }
+//     );
