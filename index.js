@@ -3,28 +3,166 @@ import Header from './components/Header';
 import Content from './components/Content';
 import Footer from './components/Footer';
 
-var state = {
-    'title': 'The Black Box',
+var State = {
+    'active': 'archive',
+    'about': {
+        'title': 'The Black Box'
+    },
+    'archive': {
+        'title': 'Welcome to my blog'
+    },
+    'the cache': {
+        'title': 'check out my projects'
+    },
+    'robot': {
+        'title': 'contact me'
+    },
+    'home': {
+        'title': 'the black box'
+    }
 };
 
+var root = document.querySelector('#root');
 
-document
-    .querySelector('#root')
-    .innerHTML = `
-        ${Navigation()}
-        ${Header(state)}
-        ${Content()}
-        ${Footer()}
-    `;
+function handleNavigation(event){
+    var newState = State;
+    
+    newState.active = event.target.textContent;
 
-document
-    .querySelector('#header')
-    .addEventListener(
-        'click',
-        function changeTheTitle(event){
-            event.target.textContent = 'Welcome to my Page';
-        }
-    );
+    event.preventDefault();
+
+    render(newState); //eslint-disable-line 
+}
+
+// function render(state){
+//     var i = 0;
+//     var links;
+
+function render(state){
+    var links;
+
+    console.log('state in render ->', state);
+
+    root.innerHTML = `
+            ${Navigation()}
+            ${Header(state[state.active])}
+            ${Content()}
+            ${Footer()}
+        `;
+
+    links = document.querySelectorAll('#navigation a');
+
+
+    // for not a function, it's a block
+    for(let i = 0; i < links.length; i++){
+        links[i].addEventListener(
+            'click',
+            handleNavigation
+        );
+    }
+
+
+    //     while (i < links.length){
+    //         links[i].addEventListener(
+    //             'click',
+    //             handleNavigation
+    //         );
+
+    //         i++;
+    //     }
+    // }
+}
+render(State); // kicks everything off
+
+
+// for loop
+
+// loop
+// var i = 0;
+
+// while(i < 10){
+//     console.log('the number is ${i}');
+//     i++;
+//     i += 2;
+// }
+
+
+// var i = 0;
+// var testArray = [ 'red', 'blue', 'green' ];
+
+// while(i < 3){
+//     console.log(testArray[i]);
+//     i++;
+// }
+// while(i < testArray.length){
+//     console.log(testArray[i]);
+//     i++;
+// }
+
+// function handleNavigation(event){
+//     event.preventDefault();
+//     console.log(event.target.textContent);
+// }
+
+
+// document
+//     .querySelector('#navigation a')
+//     .addEventListener(
+//         'click',
+//         handleNavigation
+//     );
+
+// document
+//     .querySelector('#navigation li:nth-child(2) a')
+//     .addEventListener(
+//         'click',
+//         handleNavigation
+//     );
+
+// document
+//     .querySelector('#navigation li:nth-child(3) a')
+//     .addEventListener(
+//         'click',
+//         handleNavigation
+//     );
+
+
+// document
+//     .querySelector('#navigation a')
+//     .addEventListener(
+//         'click',
+//         (event) => {
+//             event.preventDefault();
+//             console.log(event.target.textContent);
+//         }
+//     );
+
+
+/* inline notation */
+// document
+//     .querySelector('#header')
+//     .addEventListener(
+//         'click',
+//         function changeTheTitle(event){
+//             event.target.textContent = 'Welcome to my Page';
+//         }
+//     );
+
+//     /* arrow notation */
+// document
+//     .querySelector('#header')
+//     .addEventListener(
+//         'click' (event) => {
+//             event.preventDefault ();
+//             event.target.innerHTML = 'name';
+//         }
+
+// document
+//     .querySelector('p')
+//     .addEventListener(
+//         'click'
+//         .handleTitleClick;
+//     );
 
 // document
 //     .querySelector('#header')
@@ -44,3 +182,26 @@ document
 //             }
 //         }
 //     );
+
+// document
+//     .querySelector('#header')
+//     .addEventListener(
+//         'click',
+//         function changeTheTitle(event){
+//             var standard = 'The Black Box';
+//             var funny = 'Welcome to my Page';
+
+//             if(event.target.textContent === standard);
+//                 event.target.textContent = funny;
+//             }
+//             else{
+//                 event.target.textContent = standard;
+//             }
+//         }
+//     );
+
+//     function changeTheTitle (callback) {
+//         console.log ('The Black Box')
+//     }
+
+
