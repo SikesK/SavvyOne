@@ -6,18 +6,23 @@ import Footer from './components/Footer';
 var State = {
     'active': 'archive',
     'about': {
+        'links': [ 'archive', 'the cache', 'robot', 'home' ],
         'title': 'The Black Box'
     },
     'archive': {
+        'links': [ 'about', 'the cache', 'robot', 'home' ],
         'title': 'Welcome to my blog'
     },
     'the cache': {
+        'links': [ 'about', 'archive', 'robot', 'home' ],
         'title': 'check out my projects'
     },
     'robot': {
+        'links': [ 'about', 'archive', 'the cache', 'home' ],
         'title': 'contact me'
     },
     'home': {
+        'links': [ 'about', 'archive', 'the cache', 'robot' ],
         'title': 'the black box'
     }
 };
@@ -44,7 +49,7 @@ function render(state){
     console.log('state in render ->', state);
 
     root.innerHTML = `
-            ${Navigation()}
+            ${Navigation(state[state.active])}  
             ${Header(state[state.active])}
             ${Content()}
             ${Footer()}
@@ -72,6 +77,7 @@ function render(state){
     //     }
     // }
 }
+
 render(State); // kicks everything off
 
 

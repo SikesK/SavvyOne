@@ -203,7 +203,7 @@ div.nav-container {
 }
 
 .tin-man img {
-    width: 75%;
+    width: 100%;
     height: 100%;
     border: 7px solid #F40830;
     margin-top: 15px;
@@ -237,18 +237,6 @@ div.nav-container {
 
 .old-entries {
     display: grid; 
-}
-
-.blue-robot img {
-    width: 500px;
-    height: 500px;
-    border: 7px solid #3ED6D9;
-}
-
-.drummer-robot img {
-    width: 500px;
-    height: 500px;
-    border: 7px solid #3ED6D9;
 }
 
 .black img {

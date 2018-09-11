@@ -1,4 +1,4 @@
-export default function navigation(){
+export default function navigation(state){
     return ` 
         <div id="navigation">
             <ul class="nav-container">
