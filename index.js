@@ -2,35 +2,39 @@ import Navigation from './components/Navigation';
 import Header from './components/Header';
 import Content from './components/Content';
 import Footer from './components/Footer';
+import * as State from './store';
 
-var State = {
-    'active': 'archive',
-    'about': {
-        'links': [ 'archive', 'the cache', 'robot', 'home' ],
-        'title': 'The Black Box'
-    },
-    'archive': {
-        'links': [ 'about', 'the cache', 'robot', 'home' ],
-        'title': 'Welcome to my blog'
-    },
-    'the cache': {
-        'links': [ 'about', 'archive', 'robot', 'home' ],
-        'title': 'check out my projects'
-    },
-    'robot': {
-        'links': [ 'about', 'archive', 'the cache', 'home' ],
-        'title': 'contact me'
-    },
-    'home': {
-        'links': [ 'about', 'archive', 'the cache', 'robot' ],
-        'title': 'the black box'
-    }
-};
+
+// var State = {
+//     'active': 'archive',
+// 'about': {
+//     'links': [ 'archive', 'the cache', 'robot', 'home' ],
+//     'title': 'The Black Box'
+// },
+// 'archive': {
+//     'links': [ 'about', 'the cache', 'robot', 'home' ],
+//     'title': 'Welcome to my blog'
+// },
+// 'the cache': {
+//     'links': [ 'about', 'archive', 'robot', 'home' ],
+//     'title': 'check out my projects'
+// },
+// 'robot': {
+//     'links': [ 'about', 'archive', 'the cache', 'home' ],
+//     'title': 'contact me'
+// },
+// 'home': {
+//     'links': [ 'about', 'archive', 'the cache', 'robot' ],
+//     'title': 'the black box'
+// }
+// };
 
 var root = document.querySelector('#root');
 
 function handleNavigation(event){
     var newState = State;
+
+    // var newState = Object.assign({}, State); // to get page shifting again
     
     newState.active = event.target.textContent;
 
@@ -51,7 +55,7 @@ function render(state){
     root.innerHTML = `
             ${Navigation(state[state.active])}  
             ${Header(state[state.active])}
-            ${Content()}
+            ${Content(state[state.active])}
             ${Footer()}
         `;
 
