@@ -1,3 +1,4 @@
+import Navigo from 'navigo';
 import Navigation from './components/Navigation';
 import Header from './components/Header';
 import Content from './components/Content';
@@ -5,53 +6,11 @@ import Footer from './components/Footer';
 import * as State from './store';
 
 
-// var State = {
-//     'active': 'archive',
-// 'about': {
-//     'links': [ 'archive', 'the cache', 'robot', 'home' ],
-//     'title': 'The Black Box'
-// },
-// 'archive': {
-//     'links': [ 'about', 'the cache', 'robot', 'home' ],
-//     'title': 'Welcome to my blog'
-// },
-// 'the cache': {
-//     'links': [ 'about', 'archive', 'robot', 'home' ],
-//     'title': 'check out my projects'
-// },
-// 'robot': {
-//     'links': [ 'about', 'archive', 'the cache', 'home' ],
-//     'title': 'contact me'
-// },
-// 'home': {
-//     'links': [ 'about', 'archive', 'the cache', 'robot' ],
-//     'title': 'the black box'
-// }
-// };
-
 var root = document.querySelector('#root');
+var router = new Navigo(window.location.origin); // returns a router object
 
-function handleNavigation(event){
-    var newState = State;
-
-    // var newState = Object.assign({}, State); // to get page shifting again
-    
-    newState.active = event.target.textContent;
-
-    event.preventDefault();
-
-    render(newState); //eslint-disable-line 
-}
-
-// function render(state){
-//     var i = 0;
-//     var links;
 
 function render(state){
-    var links;
-
-    console.log('state in render ->', state);
-
     root.innerHTML = `
             ${Navigation(state[state.active])}  
             ${Header(state[state.active])}
@@ -59,31 +18,61 @@ function render(state){
             ${Footer()}
         `;
 
-    links = document.querySelectorAll('#navigation a');
-
-
-    // for not a function, it's a block
-    for(let i = 0; i < links.length; i++){
-        links[i].addEventListener(
-            'click',
-            handleNavigation
-        );
-    }
-
-
-    //     while (i < links.length){
-    //         links[i].addEventListener(
-    //             'click',
-    //             handleNavigation
-    //         );
-
-    //         i++;
-    //     }
-    // }
+    router.updatePageLinks();
 }
 
-render(State); // kicks everything off
+function handleNavigation(activePage){
+    var newState = Object.assign({}, State);
+        
+    newState.active = activePage;
+        
+    render(newState); //eslint-disable-line 
+}
 
+router
+    .on('/:page', (params) => handleNavigation(params.page))
+    .on('/', () => handleNavigation('home'))
+    .resolve();
+
+
+// event.preventDefault();
+// links = document.querySelectorAll('#navigation a');
+
+
+// for not a function, it's a block
+//     for(let i = 0; i < links.length; i++){
+//         links[i].addEventListener(
+//             'click',
+//             handleNavigation
+//         );
+//     }
+// }
+
+//     while (i < links.length){
+//         links[i].addEventListener(
+//             'click',
+//             handleNavigation
+//         );
+
+//         i++;
+//     }
+// }
+
+
+// function render(state){
+//     var i = 0;
+//     var links;
+
+// render(State); // kicks everything off
+
+// router
+//     .on('/', () => console.log('this is America' / 'the Home Page'))
+    
+    
+//     .on('/', () => console.log('this is America' / 'the Home Page'))
+//     .on('/archive', () => console.log('this is my blog'))
+//     .on('/:archive', (stuff) => console.log('stuff'->, stuff))
+//     .resolve();
 
 // for loop
 
@@ -147,6 +136,12 @@ render(State); // kicks everything off
 //         }
 //     );
 
+// function handleNavigation(event){
+//     var newState = State;
+
+// var newState = Object.assign({}, State); // to get page shifting again
+    
+// newState.active = event.target.textContent;
 
 /* inline notation */
 // document
@@ -213,5 +208,29 @@ render(State); // kicks everything off
 //     function changeTheTitle (callback) {
 //         console.log ('The Black Box')
 //     }
+
+// var State = {
+//     'active': 'archive',
+// 'about': {
+//     'links': [ 'archive', 'the cache', 'robot', 'home' ],
+//     'title': 'The Black Box'
+// },
+// 'archive': {
+//     'links': [ 'about', 'the cache', 'robot', 'home' ],
+//     'title': 'Welcome to my blog'
+// },
+// 'the cache': {
+//     'links': [ 'about', 'archive', 'robot', 'home' ],
+//     'title': 'check out my projects'
+// },
+// 'robot': {
+//     'links': [ 'about', 'archive', 'the cache', 'home' ],
+//     'title': 'contact me'
+// },
+// 'home': {
+//     'links': [ 'about', 'archive', 'the cache', 'robot' ],
+//     'title': 'the black box'
+// }
+// };
 
 

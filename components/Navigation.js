@@ -1,9 +1,16 @@
 
 
-function Link(link){
+function Link(link){ // link should be blog, projects, home, etc. in the event link is home, skip it
+    var href = '';
+
+    if(link ≠≠ 'home'){ // should be not equal to sign here !== or alt =
+        href = link;
+    }
+    
+    
     return `
         <li>
-            <a href="/${link}">${link}</a>
+            <a href="/${href}" data-navigo>${link}</a>
         </li>
     `;
 }
