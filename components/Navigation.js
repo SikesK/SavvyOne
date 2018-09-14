@@ -3,10 +3,9 @@
 function Link(link){ // link should be blog, projects, home, etc. in the event link is home, skip it
     var href = '';
 
-    if(link ≠≠ 'home'){ // should be not equal to sign here !== or alt =
+    if(link !== 'home'){ // should be not equal to sign here !== or alt =
         href = link;
     }
-    
     
     return `
         <li>
@@ -15,14 +14,14 @@ function Link(link){ // link should be blog, projects, home, etc. in the event l
     `;
 }
 
-export default function navigation(state){
-    var links = '';
 
-    console.log(state.links); // log the links?
+export default function Navigation(state){
+    var links = state
+        .links
+        .map(Link)
+        .join('');
 
-    for(let i = 0; i < state.links.length; i++){
-        links += Link(state.links[i]);
-    }
+    // or .reduce(acc, link) => acc += Link(link), ''
 
     return `
         <div id="navigation"> 
@@ -32,6 +31,12 @@ export default function navigation(state){
         </div>
     `;
 }
+
+
+// for(let i = 0; i < state.links.length; i++){
+//     links += Link(state.links[i]);
+// }
+
 
 // return `
 // <div id="navigation">

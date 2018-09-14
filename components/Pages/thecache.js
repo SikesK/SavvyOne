@@ -1,5 +1,6 @@
 // this is code for thecache
-export default `
+export default function thecache(){
+    return `
 <div id="footer">           
             <div class="home-footer">
                 <div class="social-footer">
@@ -49,3 +50,4 @@ export default `
             </div>
         </div>
 `;
+}

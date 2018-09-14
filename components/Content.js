@@ -1,14 +1,26 @@
 import * as Pages from './Pages';
 
-export default function content(state){
+export default function Content(state){
+    const page = state[state.active];
+    
     return `
         <div id="content> 
             <div class="container">
-                ${Pages[state.body]}
+                ${Pages[page.body](state.posts)}
             </div>
         </div>
     `;
 }
+
+// Alex had this in a posts page - not sure what my = is
+// looks like he created a blog page  in pages
+// import Post from '../Post';
+// export default function Blog(posts){
+//     return posts
+//         .map(Post)
+//         .join('');
+// }
+// took in array of objects, mapped over & outputted to screen
 
 
 // <div id="content">
