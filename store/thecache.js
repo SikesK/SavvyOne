@@ -1,6 +1,6 @@
 export default {
     'body': 'thecache',
-    'links': [ 'about', 'archive', 'robot', 'home' ],
-    'title': 'check out my projects',
+    'links': [ 'about', 'archive', 'the cache', 'support' ],
+    'title': 'The Black Box',
 };
 // added footer content to this

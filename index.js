@@ -3,22 +3,63 @@ import Navigo from 'navigo';
 import Navigation from './components/Navigation';
 import Header from './components/Header';
 import Content from './components/Content';
+// import Greeter from '.components/Greeter';
 import Footer from './components/Footer';
 import * as State from './store';
+// import store from '/store/store';
+
+// where is my greetings.js page? Put the below items on that page
+// class Greeter {
+// constructor (dispatch) {
+//      this.input = document.createElement('input');
+//      this.element = document.createElement('div');
+
+//      this.input.placeholder = "What's Your Name?";
+//      this.input.addEventListener(
+//          'keyup',
+//          () => dispatch(
+//      (state) => Object.assign(
+//         state,
+//         {'greeting': this.input.value}
+//     )
+// )
+// );
+//      this.element.appendChild(this.input);
+//   }
+
+// render(parent){
+//     parent.appendChild(this.element);
+//  }
+// }
+// export default Greeter;
 
 
 var root = document.querySelector('#root');
 var router = new Navigo(window.location.origin); // returns a router object
 var newState = Object.assign({}, State);
+// var greeter = new Greeter(store.dispatch.bind(store));
 
+
+// store = new Store(State);
+
+// function render(state){
+// var state = store.getState();
+//     root.innerHTML = `
+//             ${Navigation(state[state.active])}
+//             ${Header(state[state.active])}
+//             ${Content(state)}
+//             ${Footer()}
+//         `;
 
 function render(state){
     root.innerHTML = `
             ${Navigation(state[state.active])}  
             ${Header(state[state.active])}
             ${Content(state)}
-            ${Footer()}
+            ${Footer(state)} 
         `;
+    // delete state from footer if you get an error
+    // greeter.render(root);
 
     router.updatePageLinks();
 }
@@ -40,6 +81,56 @@ axios
         newState.posts = response.data;
         render(newState);
     });
+
+
+// axios // asking for weather api request & to pull info to log to console
+// .get('https://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=da263e6ce0e5a8d3848228e1371d9e2e');
+// .then((response) => {
+//     store.dispatch((state) => {
+//         state.weather = response.data;
+
+//         return state;
+//     });
+// });
+
+axios
+    .get('https://api.github.com/users/sikesk/repos', {
+        'headers': {
+            'Authorization': 'token 4b6083b94bcd44fc305f6b617e644635789fb302' //may need to request for new tokens
+            'Authorization': 'token ${process.env.GITHUB_API_KEY}` //may need to request for new tokens
+        }
+    })
+    .then((response) =>
+        store.dispath((state) => {
+            state.repos = response.data;
+
+            return state;
+    });
+ });
+// pulling in your github api
+
+
+
+
+// function handleNavigation(activePage){
+//     store.dispatch ((state) => Object.assign(state, {'active': activePage}));
+// }
+
+// axios
+//     .get('https://jsonplaceholder.typicode.com/posts') // returns a promise
+//     .then((response) => {
+//         store.dispatch(state) => {
+//             Object.assign(state, {'posts': response.data}));
+// });
+// store.addListeners(render);
+
+
+// store.addListeners(render);
+//         }
+//         newState.posts = response.data;
+
+//         render(newState);
+//     });
 
 
 // event.preventDefault();
@@ -215,29 +306,5 @@ axios
 //     function changeTheTitle (callback) {
 //         console.log ('The Black Box')
 //     }
-
-// var State = {
-//     'active': 'archive',
-// 'about': {
-//     'links': [ 'archive', 'the cache', 'robot', 'home' ],
-//     'title': 'The Black Box'
-// },
-// 'archive': {
-//     'links': [ 'about', 'the cache', 'robot', 'home' ],
-//     'title': 'Welcome to my blog'
-// },
-// 'the cache': {
-//     'links': [ 'about', 'archive', 'robot', 'home' ],
-//     'title': 'check out my projects'
-// },
-// 'robot': {
-//     'links': [ 'about', 'archive', 'the cache', 'home' ],
-//     'title': 'contact me'
-// },
-// 'home': {
-//     'links': [ 'about', 'archive', 'the cache', 'robot' ],
-//     'title': 'the black box'
-// }
-// };
 
 

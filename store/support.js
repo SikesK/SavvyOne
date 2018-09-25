@@ -1,7 +1,5 @@
 export default {
-    'body': 'home',
+    'body': 'support',
     'links': [ 'about', 'archive', 'the cache', 'support' ],
     'title': 'The Black Box',
 };
-
-

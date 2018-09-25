@@ -1,17 +1,6 @@
- /* #root {
-    margin: 1; 
-    display: grid; 
-    grid-template-areas:
-        "header"
-        "navigation"
-        "content"
-        "footer"; 
-    min-height: 100vh; 
-    grid-template-rows: min-content min-content auto min-content; */ 
 
-
- body {
-    margin: 1; 
+body {
+    margin: 0; 
 } 
 
 #root {
@@ -28,156 +17,67 @@
     grid-template-rows: min-content min-content auto min-content; 
 }
 
-
-
- .boxed {
-    border: 4px solid white; 
-    padding: 0 100px;
-    margin: 58px 100px;
-}
-
-#header {
-    font-family: 'Knewave'; 
-    color: white; 
-    font-size: 35pt; 
-    text-align: center;
-    background-color: black;
-    border: 5px;
-    padding: 2px;
-    display: grid;
-    grid-area: header;
-}
-
-.open-sans {
-    font-family: 'Open Sans', sans-serif;
-} 
-
-/* Style the navigation bar at top of every page start */
- #navigation {
+#navigation {
     position: sticky; 
     top: 0;
-    background-color: white;
+    background-color: black;
     font-family: 'Knewave'; 
     grid-area: navigation; 
+    display: flex; 
 }
 
-#navigation a + ul {
-    position: absolute;
-    display: none;
-    left: 0;
-    bottom: -90px;
-    background-color: darkgray;
-    list-style: none;
-    padding: 10px;
-    width: 80%; 
+.boxed-top { /* Black Box Logo in nav*/
+    font-family: 'Knewave'; 
+    color: lightgray; 
+    border: 4px solid lightgray; 
+    padding: 7px;  
+    font-size: 22px; 
+    margin-left: 10px;  
+    grid-column-start: 1; 
+    grid-row-start: 1; 
+    text-align: center;  
+    margin-bottom: 10px; 
+} 
+
+.social-top {
+    width: 8%;
+    color: lightyellow;
+    display: flex; 
+    justify-content: space-between; 
+    font-size: 25px;
+    list-style: none; 
+    margin-left: auto; 
+    padding-right: 25px;
 }
 
-#navigation > ul {
-    align-items: left;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    border: 2px black solid;
-}
-
-#navigation a + ul:hover, 
-#navigation a:hover + ul {
-    display: flex;
-    flex-direction: column;
-    word-wrap: none;
-    height: 10vh;
-    justify-content: space-between;
-}
-
-#navigation > ul > li {
-    display: inline;
-    position: relative;
-    flex-grow: 1; 
-}
-
-li {
-    float: left;
-}
 .nav-container {
-    border-style: solid;
-    border-color:darkgray; 
-    margin-top: 0; 
-    margin-bottom: 0;
-}
-
-ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    overflow: hidden;
+    background-color: black;
+    margin-top: 10px; 
 }
 
-a:link,a:visited {
-    display: block; 
-    color:black;
-    background-color:white;
-    font-family: 'Knewave'; 
-    width: 100px;
-    height: 35px;
-    text-align: center;
-    padding: 3px 3px;
-    font-size: 22px;
-    text-align: center;
-    text-decoration: none;
+.nav-categories {
+    float: left;
 }
+
+.nav-categories a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 22px; 
+}
+    
 
 a:hover,a:active {
-    background-color: orange;
+color: orange;
 }
 
-div.nav-container {
-    border: black 5px;
-}
-
-.about-drop {
-    border: 2px solid black; 
-} 
  
-
-/* Style the navigation bar at top of every page stop */
-
-
-
-/* Style home button in navigation bar at top of every page start */
-
-.material-icons {
-    vertical-align: -14%;
-    background-color: #555;
-    padding-left: 30px;
-    padding-right: 30px; 
-    padding-top: 7px; 
-    padding-bottom: 7px; 
-    margin: 3px 3px 2px 2px; 
-}
-
-#home.material-icons {
-    display: block; 
-    text-align: left; /* Center-align text */
-    font-size: 10px; 
-}
-
-/* Add a hover color */
- .material-icons i:hover {
-    background-color:orange; 
-} 
-
-/* Style home button in navigation bar at top of every page stop */
-
-
-/* Style the search box inside the navigation bar start */
-.nav-container input[type=text] {
-    float: right;
-    padding: 6px;
-    margin-top: 4px;
-    margin-right: 16px;
-    font-size: 15px;
-}       
-
-/* Style the search box inside the navigation bar stop */
 
 
 /* All blogs being displayed start */
@@ -246,286 +146,136 @@ div.nav-container {
 } 
 /* All blogs being displayed end*/
 
-/* Email list start */
-.subscribe-box {
-    padding-left: 20px;
-    background-color: orange;
-    margin-left: 5px; 
-    margin-top: 5px; 
- }
 
-  #email-address {
-    padding: 20px;
-    font-size: 15px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 20px;
-    font-size: 15px;
-}
-
-.join {
-    text-align: center;
-}
-
-  .email-header {
-    font-family: 'Knewave'; 
-    font-size: 18pt; 
-    display: grid;
-    flex-direction: column;
-    justify-content: center;
-    flex-wrap: wrap; 
-  }
-
-  .email-header h2 {
-    display: flex;
-    flex-direction: row;  
-    text-align: center; 
-} 
-
-#ok h4 {
-    background-color: slategrey; 
-    padding: 7px;
-    margin-left: 4px; 
-    color: white; 
-    display: flex; 
-    flex-direction: row;
-    align-items: baseline;
-    justify-content:flex-end;
-}
-
-.email-social {
-    width: 100%; 
-    justify-content: space-between;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-right: 10px; 
-    font-size: 25px;
-}
-
-.email-social li {
-    padding: 2px;
-}
+ 
 
 
-.fab {
-    width: 25%;
-    color: lightyellow;
-    display: flex;
-    justify-content: space-around; 
-    align-items: flex-end;  
-}
 
 
-/* Email list stop */
-
-/* Store start */
-
-.store-box {
-    padding-left: 20px;
-    background-color:#3ED6D9;
-    margin-left: 5px; 
-    margin-top: 5px; 
- } 
-
-/* Store stop */
-
-#sidebar {
-   grid-area: sidebar;
-   display: grid; 
-}
-
-.sidebar-subscribe-box {
-    padding-left: 20px;
-    background-color: orange;
-    margin-left: 5px; 
-    margin-top: 5px; 
-    margin-bottom: 15px;
- }
-
-  #email-address {
-    padding: 20px;
-    font-size: 15px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 20px;
-    font-size: 15px;
-}
-
-.join {
-    text-align: center;
-}
-
-  .email-header {
-    font-family: 'Knewave'; 
-    font-size: 18pt; 
-    display: grid;
-    flex-direction: column;
-    justify-content: center;
-    flex-wrap: wrap; 
-  }
-
-  .email-header h2 {
-    display: flex;
-    flex-direction: row;  
-    text-align: center; 
-} 
-
-#ok h4 {
-    background-color: slategrey; 
-    padding: 7px;
-    margin-left: 4px; 
-    color: white; 
-    display: flex; 
-    flex-direction: row;
-    align-items: baseline;
-    justify-content:flex-end;
-}
-
-.email-social {
-    width: 100%; 
-    justify-content: space-between;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-right: 10px; 
-    font-size: 25px;
-}
-
-.email-social li {
-    padding: 2px;
-}
 
 
-.fab {
-    width: 25%;
-    color: lightyellow;
-    display: flex;
-    justify-content: space-around; 
-    align-items: flex-end;  
-}
 
 
-/* Email list stop */
-
-/* Store start */
-
-.store-box {
-    padding-left: 20px;
-    background-color:#3ED6D9;
-    margin-left: 5px; 
-    margin-top: 5px; 
- } 
 
 
-/* Footer start */
+
+
+
+
 #footer { 
     grid-area: footer; 
-    display: grid;
+    display: flex;
+    flex-direction: column; 
+    background-color: black;  
 }
 
-.boxed-bottom { /* Black Box Logo */
+.black-footer { 
+    grid-area: footer; 
+    display: flex; 
+} 
+.boxed-bottom { 
     font-family: 'Knewave'; 
     color: lightgray; 
     border: 4px solid lightgray; 
-    padding: 10px;  
-    font-size: 30px; 
-    margin-left: 5px;  
-    grid-column-start: 1; 
-    grid-row-start: 1; 
-    display: block; 
-    text-align: center; 
-    align-items: center; 
-} 
-/* Moves Black Box Logo left to right */
-/* Moves Black Box Logo up & down */
-
-
-
-/* Social Buttons & BB Header*/     
-.social-footer {  
-    display: grid;
-    background-color: black; 
-    color: lightyellow; 
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 20% 20% 20% 20% 20%;
-    padding: 10px;
-} 
-
-
-/* Moves social button left to right */ 
-.follow-us-box {
-    grid-column-start: 3;  
-    display: grid;
-    align-items: center; 
+    padding: 7px;  
+    font-size: 22px; 
+    margin-left: 10px;  
     text-align: center;  
-    grid-row-start: 1; 
+    margin-bottom: 10px; 
+    float: left;
 } 
 
-.footer-buttons {
-    width: 100%; 
-    justify-content: space-between;
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    font-size: 25px;
-} 
-
-.follow-us {
-    justify-content: center; 
-    align-items: center; 
-    font-size: 25px; 
-    font-family: open sans
-} 
-
-#in-touch-footer {
-    padding-left: 1000px;
-    width: 100%; 
-    font-family: 'Open Sans', sans-serif;
+.social-footer {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    margin-top: 10px;  
 }
 
-#stay-in-touch h2 {
-    font-size: 25px; 
+.social-footer h2 {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 22px;
 }
 
-#in-touch-ok {
-    font-size: 25px;
-    background-color: slategrey; 
-    padding: 7px;
-    margin-left: 4px; 
+.email-footer {
+    color: lightyellow;
     display: flex; 
-    flex-direction: row;
-    align-items: baseline;
-    justify-content:flex-end;
-
-}    
-
-.social-footer li {
-    padding: 5px;
-    font-size: 30px;   
+    flex-direction: column; 
+    list-style: none; 
+    margin-left: auto; 
+    padding-right: 25px;
 }
 
-#submit-footer {
-    font-size: 15px;
+.open-sans {
+    font-family: 'Open Sans', sans-serif;
+    list-style: none;   
+}
+
+.email-footer h2 {
+    font-size: 22px;
+}
+
+.email-footer h4 {
+    font-size: 19px;
     background-color: darkgray;
-    width: 35%;
+    width: 32%;
     justify-content: center;
     align-items: center; 
-    margin-left: 1px;
+    padding-left: 4px;
+}
+
+.email-address {
+    padding: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    font-size: 18px;
+}
+
+.footer-buttons { 
+    display: flex; 
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center; 
+    font-size: 25px;
+    list-style: none; 
+    width: 60%;
 } 
 
-/*grey footer*/
-/* Entire grey footer */
-#grey-footer { 
+.footer-buttons h4 {
+    font-family: 'Open Sans', sans-serif;
+    color: lightyellow;
+    padding-right: 4px; 
+}
+
+li .fab {
+    color: lightyellow;
+    display: flex;
+    padding-left: 7px; 
+} 
+
+.grey-footer { 
+    grid-area: grey-footer; 
+    display: flex;
     color: lightgray; 
     background-color:darkgray;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end; 
+    justify-content: center; 
+    align-items: center; 
+    position: absolute;
+    margin-top: 200px; 
+    width: 100%; 
 }  
 
 .open-sans {
     font-size: 17px;
+    font-family: 'Open Sans', sans-serif;
+    list-style: none;   
 }
 
 .open-sans a {
@@ -534,38 +284,13 @@ div.nav-container {
     font-style: bold; 
 }
 
-.ideas {
-    padding-right: 100px;   
-   }
-
-.rights {
-    font-family: 'Open Sans', sans-serif;
-} 
 
 
 
-/* Footer stop */
-    
 
 
 
- /* Add for header and content too */
 
-/* Support page start */
-
-/* form {
-
-} */
-
-/* input[type=email] {
-    width: ;
-}
-
-input {
-    margin: ; 
-} */
-
-/* Support page stop */
 
 @media screen and (min-width: 320px) { 
     body {
@@ -586,3 +311,193 @@ input {
         grid-template-rows: min-content auto min-content min-content;
         grid-template-columns: 100vw auto;
 } */
+
+
+
+/* everything below here is the new css items
+  body {
+        margin: 0; 
+        background: hsla(0,0%,0%, 1.0);
+        background-image: radial-gradient(hsla(0,0%,50%, 0.8) 5%, transparent 0);
+        background-size: 30px 30px;
+    } 
+
+
+    
+    #root {
+        display: grid; 
+        grid-template-areas:
+            "navigation navigation"
+            "video video"
+            "old old"
+            "blog blog"
+            "blog blog"
+            "new new"
+            "content content"
+            "footer footer";  
+        min-height: 100vh; 
+        grid-template-columns: 1fr 50%;
+        grid-template-rows: min-content min-content auto min-content; 
+        grid-gap: 0px;
+        margin: 0;
+        padding: 0;
+    }
+    
+    
+    
+    
+    
+    #video {
+        grid-area: video; 
+        display: grid;  
+        pointer-events: none; 
+    }
+    
+    #video.promo-video {
+        grid-area: video; 
+        display: grid; 
+        margin-top: 0px;
+        grid-template-rows: 50% 50%;
+    }  
+    
+    
+    /* #old {
+        grid-area: old;
+        display: grid; 
+        display: block; 
+    }
+    
+    .latest-post-header {
+        font-family: 'Knewave'; 
+        color: white; 
+        background-color: #F40830; 
+        padding-left: 10px; 
+        display: block; 
+    } 
+    
+    #blog {
+        grid-area: blog; 
+        display: grid; 
+        grid-template-rows: 50% 50%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #old {
+        grid-area: old;
+        display: flex; 
+        flex-direction: row; 
+        display: block; 
+    }
+    
+    .latest-post-header {
+        font-family: 'Knewave'; 
+        color: white; 
+        background-color: #F40830; 
+        padding-left: 10px; 
+        display: block; 
+        width: 100%; 
+        margin-top: 0px; 
+        padding-bottom: 10px;
+    }
+
+    .latest-post {
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-gap: 25px;
+        grid-template-columns: repeat(3, 1fr);
+        list-style: none;  
+        font-family: 'Open Sans', sans-serif;
+}
+    
+    
+    .black img {
+        max-width: 425px;
+        height: 425px; 
+        border: 7px solid #3ED6D9; 
+    }
+
+    #new {
+        grid-area: old;
+        display: flex; 
+        flex-direction: row; 
+        display: block; 
+    }
+    
+    .newest-post-header {
+        font-family: 'Knewave'; 
+        color: white; 
+        background-color: #F40830; 
+        padding-left: 10px; 
+        display: block; 
+        width: 100%; 
+        margin-top: 0px; 
+        padding-bottom: 10px;
+    }
+
+    .newest-post {
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-gap: 25px;
+        grid-template-columns: repeat(3, 1fr);
+        list-style: none;  
+        font-family: 'Open Sans', sans-serif;
+}
+
+ 
+    #content {
+        grid-area: content; 
+        display: grid; 
+        display: block; 
+        align-items: center;
+        justify-content: center; 
+    }
+    
+    .new-post-subscribe {
+        margin: 0;
+        padding: 0;
+        display: grid;     
+    } 
+    
+    .new-post-text h2 {
+        font-size: 40px; 
+        font-style: bold; 
+        background-color: #00FF00; 
+        color: white; 
+        padding-left: 15px; 
+        width: 22.5%;
+    }
+    
+    .tin-man img {
+        width: 95%;
+        border: 7px solid #F40830;
+        margin-top: 15px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .new-post-text {
+        width: 2px;
+    } 
+
+    
+ 
+@media screen and (min-width: 600px) { 
+        body {
+            grid-template-areas: 
+                "navigation"
+                "video"
+                "old"
+                "blog"
+                "blog"
+                "new"
+                "content"
+                "footer"
+            grid-template-rows: min-content auto min-content min-content;
+            grid-template-columns: 100vw auto;
+        } 
+        */
+        

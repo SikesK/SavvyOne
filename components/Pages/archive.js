@@ -6,16 +6,6 @@ export default function archive(){
             <div class="new-post">
                 <div id="greeting" class="tin-man">
                     <img alt="robot" src="https://d2r9nfiii89r0l.cloudfront.net/article/images/740x500/dimg/dreamstime_m_105074748.jpg">
-                    <h3>Welcome to my portfolio page</h3>
-                    <h4>this is part of blog one</h4>
-                </div>
-            </div>
-            <div class="new-post-text">
-                <div>
-                    <h2 class="open-sans">Adventures in AI</h2>
-                </div>
-                <div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus numquam ab repellendus.</p>
                 </div>
             </div>
         </div>
@@ -46,3 +36,4 @@ export default function archive(){
     </div>
 `;
 }
+// add all blogs here

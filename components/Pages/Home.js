@@ -1,8 +1,10 @@
 export default function Home(){
     return `
         <div id="header">
-            <h2 class="boxed">The Black Box</h2>
+            
         </div>
     `;
 }
-// pulled in code from header without the state js code
+// add all main page content you've been working on here
+
+// added state to home function, create ol and slap all repos from state into this ${state.repos}

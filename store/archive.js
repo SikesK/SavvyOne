@@ -1,5 +1,5 @@
 export default {
     'body': 'archive',
-    'links': [ 'about', 'the cache', 'robot', 'home' ],
-    'title': 'Welcome to my blog',
+    'links': [ 'about', 'archive', 'the cache', 'support' ],
+    'title': 'The Black Box',
 };
