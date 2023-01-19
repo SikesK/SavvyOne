@@ -1,4 +1,4 @@
 # Kelsey Sikes
 ### *Web Developer* 
 
-Contact me at: ke_sikes@hotmail.com
+Contact me at: kelseysikes0@gmail.com
